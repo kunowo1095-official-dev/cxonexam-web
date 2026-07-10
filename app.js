@@ -374,4 +374,79 @@ document.addEventListener('DOMContentLoaded', () => {
         // Auto scroll to bottom
         telegramAlertsContainer.scrollTop = telegramAlertsContainer.scrollHeight;
     }
+
+    // -----------------------------------------------------
+    // 8. Direct Download Animation Simulator
+    // -----------------------------------------------------
+    const downloadModal = document.getElementById('download-modal');
+    const progressBarFill = document.getElementById('download-progress-bar');
+    const statusDesc = document.getElementById('download-status-desc');
+    const percentTxt = document.getElementById('download-percent-txt');
+    const downloadArrow = document.querySelector('.download-arrow');
+    const downloadSpinner = document.querySelector('.download-spinner');
+    const checkMark = document.querySelector('.check-mark');
+
+    // Select all download buttons on the landing page
+    const downloadLinks = document.querySelectorAll('a[href$="CXONEXAM.apk"]');
+
+    downloadLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent direct browser redirect
+
+            // Reset modal UI state
+            progressBarFill.style.width = '0%';
+            percentTxt.textContent = '0%';
+            statusDesc.textContent = 'Menghubungkan ke server aman...';
+            downloadArrow.classList.remove('hidden');
+            downloadSpinner.classList.remove('hidden');
+            checkMark.classList.add('hidden');
+
+            // Show modal
+            downloadModal.classList.add('active');
+
+            let progress = 0;
+            const targetApk = link.getAttribute('href');
+
+            // Animate progress bar simulation
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 4) + 1; // Increment randomly
+                if (progress > 100) progress = 100;
+
+                progressBarFill.style.width = `${progress}%`;
+                percentTxt.textContent = `${progress}%`;
+
+                // Update text based on progress
+                if (progress < 25) {
+                    statusDesc.textContent = 'Menghubungkan ke server aman...';
+                } else if (progress < 60) {
+                    statusDesc.textContent = 'Mengunduh berkas CXONEXAM.apk (26.1 MB)...';
+                } else if (progress < 85) {
+                    statusDesc.textContent = 'Menganalisis integritas checksum SHA-256...';
+                } else if (progress < 100) {
+                    statusDesc.textContent = 'Memverifikasi tanda tangan APK...';
+                } else {
+                    statusDesc.textContent = 'Unduhan selesai!';
+                    clearInterval(interval);
+
+                    // Show success checkmark
+                    downloadArrow.classList.add('hidden');
+                    downloadSpinner.classList.add('hidden');
+                    checkMark.classList.remove('hidden');
+
+                    // Trigger the actual file download in browser
+                    const dummyLink = document.createElement('a');
+                    dummyLink.href = targetApk;
+                    dummyLink.setAttribute('download', '');
+                    document.body.appendChild(dummyLink);
+                    dummyLink.click();
+                    document.body.removeChild(dummyLink);
+
+                    // Fade out modal after 1.5 seconds
+                    setTimeout(() => {
+                        downloadModal.classList.remove('active');
+                    }, 1500);
+                }
+            }, 50); // Total duration around 2 seconds
+        });
+    });
 });

@@ -578,6 +578,26 @@
         </div>
     </footer>
 
+    <!-- Download Progress Modal Overlay -->
+    <div class="download-modal-overlay" id="download-modal">
+        <div class="download-modal-content">
+            <div class="download-icon-wrapper">
+                <div class="download-spinner"></div>
+                <i class="fa-solid fa-download download-arrow"></i>
+                <i class="fa-solid fa-check check-mark hidden"></i>
+            </div>
+            <h3 class="download-modal-title">Mengunduh CXONEXAM...</h3>
+            <div class="progress-container">
+                <div class="progress-bar-fill" id="download-progress-bar"></div>
+            </div>
+            <div class="download-status-row">
+                <span class="download-status-text" id="download-status-desc">Menghubungkan ke server aman...</span>
+                <span class="download-percent" id="download-percent-txt">0%</span>
+            </div>
+            <p class="download-tip">Proses unduhan sedang berjalan di latar belakang.</p>
+        </div>
+    </div>
+
     <!-- Web Script -->
     <script src="app.js"></script>
 </body>

@@ -1639,3 +1639,141 @@ footer {
         text-align: center;
     }
 }
+
+/* =========================================================
+   Download Progress Modal Styles (Navy & Yellow)
+   ========================================================= */
+.download-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 12, 29, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.download-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.download-modal-content {
+    background: rgba(20, 31, 58, 0.95);
+    border: 1px solid var(--accent-yellow);
+    box-shadow: 0 0 30px var(--accent-yellow-glow), inset 0 0 15px rgba(255, 195, 0, 0.05);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 30px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.download-modal-overlay.active .download-modal-content {
+    transform: scale(1);
+}
+
+.download-icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.03);
+    border-top: 3px solid var(--accent-yellow);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+.download-arrow {
+    font-size: 2rem;
+    color: var(--accent-yellow);
+    animation: bounceArrow 1.5s infinite ease-in-out;
+    text-shadow: 0 0 8px var(--accent-yellow-glow);
+}
+
+.check-mark {
+    font-size: 2.2rem;
+    color: #00ff66;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+}
+
+.download-modal-title {
+    font-family: var(--font-header);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-yellow-dark) 0%, var(--accent-yellow) 100%);
+    box-shadow: 0 0 8px var(--accent-yellow-glow);
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+
+.download-status-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-slate);
+    margin-bottom: 24px;
+}
+
+.download-status-text {
+    font-weight: 500;
+}
+
+.download-percent {
+    font-family: var(--font-header);
+    color: var(--accent-yellow);
+    font-weight: 700;
+}
+
+.download-tip {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounceArrow {
+    0%, 100% { transform: translateY(-4px); }
+    50% { transform: translateY(4px); }
+}
+
