@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CXONEXAM - Aplikasi Secure Exam Browser Android premium dengan Kiosk Mode, Keyboard Kustom, Watchdog Keamanan, dan laporan anti-contek via Telegram.">
+    <title>CXONEXAM | Secure Exam Browser & Anti-Cheat Android App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Grid & Glowing Effects -->
+    <div class="secure-grid"></div>
+    <div class="glow-orb orb-navy"></div>
+    <div class="glow-orb orb-yellow"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-user-lock"></i></span>
+                <span class="logo-text">CXON<span class="text-yellow">EXAM</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#overview" class="nav-link">Fitur Utama</a>
+                <a href="#simulator" class="nav-link">Uji Simulator</a>
+                <a href="#guide" class="nav-link">Panduan Pengguna</a>
+                <a href="#architecture" class="nav-link">Detail Teknis</a>
+            </nav>
+            <a href="https://www.mediafire.com/file/bf2ddssui2ljuj5/CXONEXAM.apk/file" target="_blank" class="btn btn-nav yellow-border">
+                <span>INSTALL APK</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge yellow-badge"><i class="fa-solid fa-shield-halved"></i> SECURE EXAM SYSTEM</span>
+                    <span class="badge stats-badge">Anti-Cheat Enabled</span>
+                </div>
+                <h1 class="hero-title">
+                    Ujian Steril,<br>
+                    <span class="text-yellow glow-text">Bebas Kecurangan.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Aplikasi Secure Exam Browser berbasis Android untuk mengunci total HP siswa selama ujian. Dilengkapi Kiosk Mode, custom keyboard steril, sistem pendeteksi overlay, dan integrasi alert Telegram secara real-time.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://www.mediafire.com/file/bf2ddssui2ljuj5/CXONEXAM.apk/file" target="_blank" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-download"></i> DOWNLOAD CXONEXAM APK
+                    </a>
+                    <span class="cta-info"><i class="fa-brands fa-android"></i> Kompatibel dengan Android Oreo 8.0 hingga versi terbaru</span>
+                </div>
+                <div class="hero-security-tags">
+                    <div class="tag-item">
+                        <i class="fa-solid fa-circle-check text-yellow"></i>
+                        <span>Kiosk Mode Locked</span>
+                    </div>
+                    <div class="tag-item">
+                        <i class="fa-solid fa-circle-check text-yellow"></i>
+                        <span>Custom Steril Keyboard</span>
+                    </div>
+                    <div class="tag-item">
+                        <i class="fa-solid fa-circle-check text-yellow"></i>
+                        <span>Real-time Telegram Alert</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="phone-frame-wrapper">
+                    <!-- Laser / Hologram scanning light -->
+                    <div class="scanner-light"></div>
+                    <div class="phone-frame">
+                        <div class="phone-speaker"></div>
+                        <div class="phone-screen">
+                            <!-- Splash screen simulator -->
+                            <div class="screen-content splash-screen active" id="splash-exam">
+                                <div class="splash-logo">
+                                    <i class="fa-solid fa-user-lock"></i>
+                                    <h2>CXON<span class="text-yellow">EXAM</span></h2>
+                                    <p>SECURE EXAM SYSTEM</p>
+                                </div>
+                                <div class="splash-loader">
+                                    <div class="loader-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Pillars Section -->
+    <section id="overview" class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pilar Keamanan <span class="text-yellow">CXONEXAM</span></h2>
+                <p class="section-desc">Bagaimana CXONEXAM memproteksi integritas ujian akademik sekolah Anda secara total.</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-key"></i></div>
+                    <h3>Kiosk Mode Keras</h3>
+                    <p>Mengunci tombol Home, Back, dan Recent Apps. Aplikasi bertindak sebagai Default Launcher untuk mencegah siswa menutup atau keluar dari halaman ujian tanpa izin pengawas.</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-keyboard"></i></div>
+                    <h3>Keyboard Steril Kustom</h3>
+                    <p>Meniadakan celah curang dari keyboard bawaan HP. Tidak ada prediksi kata kamus pintar, pengetikan suara (voice search), clipboard copy-paste, atau emoji.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Watchdog Pengawas Latar</h3>
+                    <p>Mendeteksi dan menutup paksa aplikasi overlay (kalkulator popup, floating browser). Mengunci volume suara, melacak kehilangan fokus, dan membekukan lembar ujian secara instan.</p>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <h3>Laporan Instan Telegram</h3>
+                    <p>Jika ada indikasi kecurangan, nama, kelas, absen, jenis pelanggaran, serta link ujian siswa akan langsung dikirimkan ke Telegram Guru secara real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="simulator" class="simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Uji Simulator <span class="text-yellow">CXONEXAM</span></h2>
+                <p class="section-desc">Coba langsung simulasi pengalaman murid &amp; guru menggunakan sistem perlindungan CXONEXAM.</p>
+            </div>
+
+            <div class="sim-dashboard">
+                <!-- Dashboard Controller (Left Side) -->
+                <div class="sim-controls">
+                    <!-- Mode Switcher -->
+                    <div class="sim-control-card">
+                        <h3>1. Pilih Mode Perangkat</h3>
+                        <div class="mode-tabs">
+                            <button class="mode-tab-btn active" id="btn-mode-student">
+                                <i class="fa-solid fa-user-graduation"></i> Layar HP Siswa
+                            </button>
+                            <button class="mode-tab-btn" id="btn-mode-teacher">
+                                <i class="fa-solid fa-user-tie"></i> Layar HP Guru (Alerts)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Student Simulation Scenarios -->
+                    <div class="sim-control-card" id="student-scenarios-panel">
+                        <h3>2. Trigger Percobaan Kecurangan</h3>
+                        <p class="card-hint">Klik aksi kecurangan di bawah ini untuk melihat bagaimana sistem CXONEXAM bereaksi melindungi integritas ujian:</p>
+                        
+                        <div class="scenario-buttons">
+                            <button class="btn-scenario" id="trigger-overlay-cheat">
+                                <i class="fa-solid fa-window-restore text-yellow"></i> Buka Aplikasi Overlay (Kalkulator Popup)
+                            </button>
+                            <button class="btn-scenario" id="trigger-disconnect-wifi">
+                                <i class="fa-solid fa-wifi-slash text-yellow"></i> Matikan Koneksi Internet Wifi/Data
+                            </button>
+                            <button class="btn-scenario" id="trigger-clipboard-paste">
+                                <i class="fa-solid fa-paste text-yellow"></i> Tempel (Paste) Jawaban dari Luar
+                            </button>
+                            <button class="btn-scenario" id="trigger-exit-attempt">
+                                <i class="fa-solid fa-door-open text-yellow"></i> Coba Keluar Aplikasi (Klik Back/Home)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Simulation Scenarios -->
+                    <div class="sim-control-card hidden" id="teacher-settings-panel">
+                        <h3>2. Setup Link &amp; Telegram Bot</h3>
+                        <div class="teacher-setup-form">
+                            <div class="form-field">
+                                <label>Tautan Soal Ujian:</label>
+                                <input type="text" id="teacher-exam-url" value="https://docs.google.com/forms/d/exam101/viewform">
+                            </div>
+                            <div class="form-field">
+                                <label>Exit Password Guru:</label>
+                                <input type="text" id="teacher-exit-pwd" value="KELUAR99">
+                            </div>
+                            <button class="btn-generate-qr" id="btn-generate-qr">
+                                <i class="fa-solid fa-qrcode"></i> GENERATE QR CODE UJIAN
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Mockup Display (Right Side) -->
+                <div class="sim-display">
+                    
+                    <!-- 1. STUDENT MOCKUP PHONE -->
+                    <div class="device-body" id="student-device">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            
+                            <!-- Status Bar -->
+                            <div class="dev-status-bar">
+                                <span class="dev-time">10:00</span>
+                                <div class="dev-status-icons">
+                                    <i class="fa-solid fa-wifi" id="indicator-wifi"></i>
+                                    <i class="fa-solid fa-battery-full" id="indicator-battery"></i>
+                                </div>
+                            </div>
+
+                            <!-- Screen Container -->
+                            <div class="dev-screen-container" id="student-screen-body">
+                                
+                                <!-- Student Step 1: Input Identity -->
+                                <div class="dev-panel active" id="pane-student-identity">
+                                    <div class="pane-header">
+                                        <h4>Identitas Siswa</h4>
+                                        <p>Lengkapi data sebelum scan barcode soal</p>
+                                    </div>
+                                    <div class="pane-form">
+                                        <input type="text" id="stu-name" placeholder="Nama Lengkap Siswa" value="Rayhan Alfarabi">
+                                        <div class="form-row">
+                                            <input type="text" id="stu-class" placeholder="Kelas (misal: 9)" value="9">
+                                            <input type="text" id="stu-group" placeholder="Grup (misal: A)" value="B">
+                                        </div>
+                                        <input type="number" id="stu-abs" placeholder="Nomor Absen" value="24">
+                                        
+                                        <button class="btn-pane-submit" id="btn-save-identity">SIMPAN &amp; LANJUT</button>
+                                    </div>
+                                </div>
+
+                                <!-- Student Step 2: QR Scanner -->
+                                <div class="dev-panel" id="pane-student-scan">
+                                    <div class="pane-header">
+                                        <h4>Pindai Barcode</h4>
+                                        <p>Arahkan kamera ke QR Code Ujian milik guru</p>
+                                    </div>
+                                    <div class="scan-area-wrapper">
+                                        <div class="scanner-box">
+                                            <div class="scanner-line"></div>
+                                            <i class="fa-solid fa-expand scanner-corner"></i>
+                                        </div>
+                                        <p class="scan-status-text">Mencari kode QR...</p>
+                                    </div>
+                                    <button class="btn-pane-back" id="btn-back-to-identity">Kembali</button>
+                                </div>
+
+                                <!-- Student Step 3: Exam Interface (Google Form / CBT Sim) -->
+                                <div class="dev-panel" id="pane-student-exam">
+                                    <div class="exam-app-bar">
+                                        <span class="exam-title-bar"><i class="fa-solid fa-lock text-yellow"></i> Ujian Matematika</span>
+                                        <button class="btn-exit-exam" id="btn-trigger-exit-modal">KELUAR</button>
+                                    </div>
+                                    
+                                    <div class="exam-web-frame">
+                                        <div class="exam-scrollable">
+                                            <div class="exam-header-banner">
+                                                <h5>SOAL MATEMATIKA SEMESTER 2</h5>
+                                                <p>Waktu Pengerjaan: 90 Menit</p>
+                                            </div>
+                                            
+                                            <div class="exam-question-card">
+                                                <p class="q-number">Soal 1 dari 10</p>
+                                                <p class="q-text">Berapakah hasil dari akar kuadrat 144 dikali 5?</p>
+                                                <div class="q-input-wrapper">
+                                                    <input type="text" class="exam-text-input" id="exam-ans-1" placeholder="Jawaban Anda..." readonly>
+                                                    <span class="paste-warning-text hidden" id="clipboard-warning">Blokir Clipboard: Copy-paste dilarang!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Custom IME Alphanumeric Keyboard -->
+                                    <div class="custom-ime-keyboard" id="custom-keyboard">
+                                        <div class="keyboard-row">
+                                            <button class="key">Q</button><button class="key">W</button><button class="key">E</button><button class="key">R</button><button class="key">T</button><button class="key">Y</button><button class="key">U</button><button class="key">I</button><button class="key">O</button><button class="key">P</button>
+                                        </div>
+                                        <div class="keyboard-row">
+                                            <button class="key">A</button><button class="key">S</button><button class="key">D</button><button class="key">F</button><button class="key">G</button><button class="key">H</button><button class="key">J</button><button class="key">K</button><button class="key">L</button>
+                                        </div>
+                                        <div class="keyboard-row">
+                                            <button class="key">Z</button><button class="key">X</button><button class="key">C</button><button class="key">V</button><button class="key">B</button><button class="key">N</button><button class="key">M</button>
+                                            <button class="key-control" id="key-delete"><i class="fa-solid fa-delete-left"></i></button>
+                                        </div>
+                                        <div class="keyboard-row-special">
+                                            <button class="key-control" id="key-nums">123</button>
+                                            <button class="key-space" id="key-space">SPASI</button>
+                                            <button class="key-control text-yellow" id="key-enter">ENTER</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Student Cheat Overlay Alert (Watchdog Screen) -->
+                                <div class="dev-overlay-alert" id="student-cheat-overlay">
+                                    <div class="overlay-alert-content">
+                                        <i class="fa-solid fa-circle-exclamation text-yellow animate-alert-glow"></i>
+                                        <h3>KECURANGAN DETEKSI!</h3>
+                                        <p id="cheat-overlay-detail">Overlay Terdeteksi: Aplikasi Melayang Dilarang.</p>
+                                        <span class="warning-alert-info">Laporan pelanggaran telah dikirimkan ke Telegram pengawas. Ujian dibekukan.</span>
+                                        <button class="btn-reset-simulator" id="btn-close-cheat-overlay">LANJUTKAN UJIAN (RESET)</button>
+                                    </div>
+                                </div>
+
+                                <!-- Network Lock Overlay Screen -->
+                                <div class="dev-overlay-alert bg-black-solid" id="student-network-overlay">
+                                    <div class="overlay-alert-content">
+                                        <i class="fa-solid fa-wifi-slash text-yellow animate-alert-glow"></i>
+                                        <h3 class="letter-spacing-wide">KONEKSI TERPUTUS</h3>
+                                        <p>Hubungkan kembali perangkat Anda ke Wifi sekolah untuk melanjutkan lembar soal.</p>
+                                        <span class="warning-alert-info">Halaman soal dibekukan sementara hingga koneksi pulih.</span>
+                                        <button class="btn-reset-simulator" id="btn-restore-wifi">HUBUNGKAN WIFI (SIMULASI)</button>
+                                    </div>
+                                </div>
+
+                                <!-- Exit Password Dialog Screen -->
+                                <div class="dev-overlay-alert" id="student-exit-modal">
+                                    <div class="overlay-alert-content">
+                                        <i class="fa-solid fa-user-shield text-yellow"></i>
+                                        <h3>Konfirmasi Keluar Ujian</h3>
+                                        <p>Ujian Anda sedang dikunci. Minta guru untuk memasukkan password exit untuk mengembalikan HP normal.</p>
+                                        <input type="password" id="student-exit-input" placeholder="Masukkan Exit Password">
+                                        <span class="error-msg hidden" id="exit-pwd-error">Password salah!</span>
+                                        
+                                        <div class="exit-dialog-buttons">
+                                            <button class="btn-pane-back" id="btn-cancel-exit">Batal</button>
+                                            <button class="btn-pane-submit" id="btn-submit-exit">KELUAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. TEACHER MONITORING PHONE (TELEGRAM ALERTS) -->
+                    <div class="device-body hidden" id="teacher-device">
+                        <div class="device-notch"></div>
+                        <div class="device-screen bg-telegram">
+                            
+                            <!-- Telegram App Header -->
+                            <div class="tg-app-header">
+                                <div class="tg-back"><i class="fa-solid fa-arrow-left"></i></div>
+                                <div class="tg-avatar"><i class="fa-solid fa-robot"></i></div>
+                                <div class="tg-user-info">
+                                    <span class="tg-title">CXONEXAM ALERT BOT</span>
+                                    <span class="tg-status">bot</span>
+                                </div>
+                                <div class="tg-actions"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                            <!-- Telegram Chat Body -->
+                            <div class="tg-chat-body" id="telegram-alerts-container">
+                                <div class="tg-system-date">Hari Ini</div>
+                                
+                                <div class="tg-msg-bubble">
+                                    <div class="tg-msg-header">🤖 CXONEXAM SYSTEM WATCHDOG</div>
+                                    <p>Bot berhasil dihubungkan ke server sekolah. Menunggu aktivitas ujian...</p>
+                                    <span class="tg-msg-time">09:50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Guide Section -->
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Panduan Penggunaan <span class="text-yellow">CXONEXAM</span></h2>
+                <p class="section-desc">Panduan langkah-demi-langkah bagi guru dan murid untuk menyelenggarakan ujian steril.</p>
+            </div>
+
+            <div class="guide-tabs-container">
+                <!-- Teacher Instructions -->
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-badge badge-teacher"><i class="fa-solid fa-user-tie"></i> Panduan Guru (Teacher)</span>
+                    </div>
+                    <div class="guide-card-body">
+                        <ul class="guide-list">
+                            <li>
+                                <span class="guide-step">1</span>
+                                <div class="guide-text">
+                                    <strong>Pilih Menu Guru</strong>
+                                    <p>Buka aplikasi CXONEXAM dan pilih halaman **TEACHER/GURU** di menu awal.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">2</span>
+                                <div class="guide-text">
+                                    <strong>Input Detail Ujian</strong>
+                                    <p>Masukkan tautan soal ujian (Google Form, CBT, dll) beserta password keluar (*exit password*).</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">3</span>
+                                <div class="guide-text">
+                                    <strong>Integrasi Bot Telegram</strong>
+                                    <p>Masukkan token API Bot Telegram dan Chat ID Anda agar pesan pelanggaran siswa langsung dikirim ke HP Anda.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">4</span>
+                                <div class="guide-text">
+                                    <strong>Sebarkan QR Code</strong>
+                                    <p>Generate QR Code ujian terenkripsi berlapis, lalu tampilkan di depan kelas menggunakan proyektor.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Student Instructions -->
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <span class="guide-badge badge-student"><i class="fa-solid fa-user-graduation"></i> Panduan Siswa (Student)</span>
+                    </div>
+                    <div class="guide-card-body">
+                        <ul class="guide-list">
+                            <li>
+                                <span class="guide-step">1</span>
+                                <div class="guide-text">
+                                    <strong>Isi Identitas Diri</strong>
+                                    <p>Jalankan aplikasi, pilih **STUDENT/SISWA**, lalu masukkan nama lengkap, kelas, grup, dan nomor absen Anda.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">2</span>
+                                <div class="guide-text">
+                                    <strong>Scan QR Code Ujian</strong>
+                                    <p>Ketuk tombol **SCAN QR** dan arahkan kamera ke barcode ujian terenkripsi yang ditampilkan guru di layar proyektor.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">3</span>
+                                <div class="guide-text">
+                                    <strong>Kunci Launcher Default</strong>
+                                    <p>Pilih "CXONEXAM" sebagai *Home Launcher default* ketika sistem Android memintanya untuk mengunci tombol navigasi.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="guide-step">4</span>
+                                <div class="guide-text">
+                                    <strong>Selesai &amp; Input Password Exit</strong>
+                                    <p>Setelah selesai mengerjakan soal, panggil guru pengawas untuk memasukkan *Exit Password* agar HP Anda kembali normal.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture Section -->
+    <section id="architecture" class="tech-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Overview Teknis &amp; Keamanan</h2>
+                <p class="section-desc">Dokumentasi fungsionalitas berkas kode inti pada aplikasi Android CXONEXAM.</p>
+            </div>
+
+            <div class="tech-table-wrapper">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Komponen Kode</th>
+                            <th>Fungsi Spesifik</th>
+                            <th>Teknis Pengamanan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">KioskManager.kt</span></td>
+                            <td>Screen Pinning &amp; Lock Task</td>
+                            <td>Mencegah penekanan tombol Home/Back/Recent menggunakan API Lock Task internal Android.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">ExamKeyboardService.kt</span></td>
+                            <td>Custom Steril IME Service</td>
+                            <td>Mengganti keyboard bawaan sistem dengan IME buatan sendiri tanpa clipboard, auto-correct, &amp; voice typing.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">SecurityWatchdogService.kt</span></td>
+                            <td>Overlay Detection &amp; Sound Lock</td>
+                            <td>Membatalkan sound/volume change, mendeteksi background activity melayang, dan memicu notifikasi pelanggaran.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">TelegramHelper.kt</span></td>
+                            <td>Telegram Integration API</td>
+                            <td>Mengirim alert kecurangan (nama, kelas, absen, pelanggaran) via API request bot Telegram terenkripsi HTTPS.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">QRUtils.kt</span></td>
+                            <td>Enkripsi Barcode Berlapis</td>
+                            <td>Mengamankan tautan ujian via kombinasi algoritma **AES-128**, **GZIP**, **XOR**, dan **Reversed Base64**.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tech-badge badge-cyan">ExamDeviceAdminReceiver.kt</span></td>
+                            <td>Device Owner Administration</td>
+                            <td>Menjadikan CXONEXAM sebagai Administrator Utama HP agar siswa tidak bisa mematikan paksa aplikasi secara manual.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="cta-bottom-section">
+        <div class="cta-glow-bg"></div>
+        <div class="container text-center">
+            <h2 class="cta-title">Siap Menggelar Ujian yang Aman dan Jujur?</h2>
+            <p class="cta-desc">Unduh CXONEXAM APK sekarang dan rasakan sistem perlindungan Secure Exam Browser Android terbaik.</p>
+            <div class="cta-buttons-wrapper">
+                <a href="https://www.mediafire.com/file/bf2ddssui2ljuj5/CXONEXAM.apk/file" target="_blank" class="btn btn-primary btn-glow btn-lg">
+                    <i class="fa-solid fa-download"></i> DOWNLOAD NOW (APK)
+                </a>
+            </div>
+            <p class="compatibility"><i class="fa-brands fa-android"></i> Mendukung seluruh HP Android minimal Android Oreo 8.0</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="logo logo-footer">
+                    <span class="logo-icon"><i class="fa-solid fa-user-lock"></i></span>
+                    <span class="logo-text">CXON<span class="text-yellow">EXAM</span></span>
+                </div>
+                <p class="copyright">&copy; 2026 CXONEXAM Inc. Hak Cipta Dilindungi Undang-Undang. Secure Exam Browser &amp; Anti-Cheat Android App.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#overview">Fitur</a>
+                    <a href="#simulator">Simulator</a>
+                    <a href="#guide">Panduan</a>
+                    <a href="https://www.mediafire.com/file/bf2ddssui2ljuj5/CXONEXAM.apk/file" target="_blank">Mediafire APK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Web Script -->
+    <script src="app.js"></script>
+</body>
+</html>
