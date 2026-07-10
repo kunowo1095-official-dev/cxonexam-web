@@ -167,6 +167,24 @@ body {
     filter: drop-shadow(0 0 8px var(--accent-yellow-glow));
 }
 
+.logo-img {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1.5px solid var(--accent-yellow);
+    box-shadow: 0 0 8px var(--accent-yellow-glow);
+}
+
+.splash-logo-img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid var(--accent-yellow);
+    box-shadow: 0 0 15px var(--accent-yellow-glow);
+}
+
 .nav-links {
     display: flex;
     gap: 32px;
